@@ -5,7 +5,7 @@ const SavedCandidates = () => {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
 
   const getCandidates = () => {
-    const savedCandidates = JSON.parse(localStorage.getItem("savedCandidates")) || [];
+    const savedCandidates = JSON.parse(localStorage.getItem("savedCandidates") || '{}');
     setCandidates(savedCandidates)
   }
 

@@ -53,7 +53,7 @@ const CandidateSearch = () => {
 
   const approveCandidate = () => {
     // Save current user's login to local storage
-    const savedCandidates = JSON.parse(localStorage.getItem("savedCandidates")) || [];
+    const savedCandidates = JSON.parse(localStorage.getItem("savedCandidates") || '{}');
     savedCandidates.push(currentUser);
     localStorage.setItem("savedCandidates", JSON.stringify(savedCandidates));
     nextUser();
